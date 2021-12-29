@@ -1,18 +1,20 @@
 #pragma once
 
+#include <iostream>
+
 template <class T>
 class MyVector
 {
 private:
    T *array;
-   int size;
-   int capacity;
+   std::size_t size;
+   std::size_t capacity;
 
 public:
    MyVector();
    ~MyVector();
    void resize(std::size_t __new_size);
-   std::size_t size();
+   std::size_t size() const;
    std::size_t capacity() const;
    bool empty() const;
    void push_back(T item);
