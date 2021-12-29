@@ -81,3 +81,14 @@ void MyVector<T>::push_back(T item)
    array[array_size] = item;
    array_size++;
 }
+
+/**
+ * Returns true if the MyVector is empty
+ * 
+ * @returns  True if the MyVector is empty
+ * */
+template <class T>
+bool MyVector<T>::empty() const
+{
+   return array_size == 0;
+}
