@@ -18,7 +18,7 @@ public:
    std::size_t capacity() const;
    bool empty() const;
    void push_back(T item);
-   void pop_back(int n);
+   void pop_back(std::size_t n);
    void pop_back();
    void clear();
    T &operator[](int i);

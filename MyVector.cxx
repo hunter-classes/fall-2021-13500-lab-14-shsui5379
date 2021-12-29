@@ -95,13 +95,12 @@ bool MyVector<T>::empty() const
 
 /**
  * Removes the nth element. 
- * If n < 0, the first element is removed. 
  * If n > size, the last element is removed.
  * 
  * @param n  The index of the element to remove
  * */
 template <class T>
-void MyVector<T>::pop_back(int n)
+void MyVector<T>::pop_back(std::size_t n)
 {
    for (int i = 0; i < array_size - 2; i++)
    {
