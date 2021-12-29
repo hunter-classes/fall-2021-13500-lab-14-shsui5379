@@ -52,15 +52,17 @@ TEST_CASE("size, resize, capacity, push_back")
    }
 }
 
-TEST_CASE("empty")
+TEST_CASE("empty and clear")
 {
    MyVector<int> v;
 
    CHECK(v.empty() == true);
 
    v.push_back(1);
-
    CHECK(v.empty() == false);
+
+   v.clear();
+   CHECK(v.empty() == true);
 }
 
 TEST_CASE("pop_back and size")
