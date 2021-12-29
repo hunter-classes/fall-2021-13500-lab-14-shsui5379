@@ -39,3 +39,14 @@ void MyVector<T>::resize(std::size_t __new_size)
    array = new_array;
    capacity = __new_size;
 }
+
+/**
+ * Returns the number of elements in the MyVector
+ * 
+ * @returns  The number of elements in the MyVector
+ * */
+template <class T>
+std::size_t MyVector<T>::size() const
+{
+   return size;
+}
