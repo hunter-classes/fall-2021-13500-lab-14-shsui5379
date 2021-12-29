@@ -11,9 +11,9 @@ private:
 public:
    MyVector();
    ~MyVector();
-   void resize(size_t __new_size);
-   size_t size();
-   size_t capacity() const;
+   void resize(std::size_t __new_size);
+   std::size_t size();
+   std::size_t capacity() const;
    bool empty() const;
    void push_back(T item);
    void pop_back(int n);
