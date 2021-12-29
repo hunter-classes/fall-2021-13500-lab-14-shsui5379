@@ -7,13 +7,13 @@ class MyVector
 {
 private:
    T *array;
-   std::size_t size;
-   std::size_t capacity;
+   std::size_t array_size;
+   std::size_t array_capacity;
 
 public:
    MyVector();
    ~MyVector();
-   void resize(std::size_t __new_size);
+   void resize(std::size_t new_size);
    std::size_t size() const;
    std::size_t capacity() const;
    bool empty() const;

@@ -23,10 +23,10 @@ MyVector<T>::~MyVector()
 /**
  * Resizes the MyVector to the specified number of elements.
  * 
- * @param __new_size  Number of elements the MyVector should be able to hold
+ * @param new_size  Number of elements the MyVector should be able to hold
  * */
 template <class T>
-void MyVector<T>::resize(std::size_t __new_size)
+void MyVector<T>::resize(std::size_t new_size)
 {
    T *new_array = new T[__new_size];
 
@@ -48,7 +48,7 @@ void MyVector<T>::resize(std::size_t __new_size)
 template <class T>
 std::size_t MyVector<T>::size() const
 {
-   return size;
+   return array_size;
 }
 
 /**
@@ -60,5 +60,5 @@ std::size_t MyVector<T>::size() const
 template <class T>
 std::size_t MyVector<T>::capacity() const
 {
-   return capacity;
+   return array_capacity;
 }
