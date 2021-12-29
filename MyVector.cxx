@@ -130,3 +130,15 @@ void MyVector<T>::clear()
 {
    array_size = 0;
 }
+
+/**
+ * Returns a reference to the element at index i
+ * 
+ * @param i  Index
+ * @returns  Reference to the element at index i
+ * */
+template <class T>
+T &MyVector<T>::operator[](int i)
+{
+   return array[i];
+}
