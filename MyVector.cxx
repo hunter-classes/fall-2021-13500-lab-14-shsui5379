@@ -126,7 +126,7 @@ void MyVector<T>::pop_back()
  * Erases all the elements
  * */
 template <class T>
-void clear()
+void MyVector<T>::clear()
 {
    array_size = 0;
 }
