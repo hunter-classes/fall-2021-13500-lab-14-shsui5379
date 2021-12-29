@@ -85,3 +85,18 @@ TEST_CASE("pop_back and size")
    v.pop_back(10);
    CHECK(v.size() == 2);
 }
+
+TEST_CASE("[] operator")
+{
+   MyVector<int> v;
+
+   for (int i = 0; i < 5; i++)
+   {
+      v.push_back(i);
+   }
+
+   CHECK(v[2] == 2);
+
+   v[3] = 100;
+   CHECK(v[3] == 100);
+}
