@@ -6,8 +6,8 @@
 template <class T>
 MyVector<T>::MyVector()
 {
-   size = 0;
-   capcity = 0;
+   array_size = 0;
+   array_capacity = 0;
    array = nullptr;
 }
 
@@ -28,16 +28,16 @@ MyVector<T>::~MyVector()
 template <class T>
 void MyVector<T>::resize(std::size_t new_size)
 {
-   T *new_array = new T[__new_size];
+   T *new_array = new T[new_size];
 
-   for (int i = 0; i < size; i++)
+   for (int i = 0; i < array_size; i++)
    {
       new_array[i] = array[i];
    }
 
    delete[] array;
    array = new_array;
-   capacity = __new_size;
+   array_capacity = new_size;
 }
 
 /**
