@@ -51,3 +51,14 @@ TEST_CASE("size, resize, capacity, push_back")
       CHECK(v.capacity() == 16);
    }
 }
+
+TEST_CASE("empty")
+{
+   MyVector<int> v;
+
+   CHECK(v.empty() == true);
+
+   v.push_back(1);
+
+   CHECK(v.empty() == false);
+}
