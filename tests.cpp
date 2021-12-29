@@ -62,3 +62,24 @@ TEST_CASE("empty")
 
    CHECK(v.empty() == false);
 }
+
+TEST_CASE("pop_back and size")
+{
+   MyVector<int> v;
+
+   for (int i = 0; i < 5; i++)
+   {
+      v.push_back(i);
+   }
+
+   CHECK(v.size() == 5);
+
+   v.pop_back();
+   CHECK(v.size() == 4);
+
+   v.pop_back(2);
+   CHECK(v.size() == 3);
+
+   v.pop_back(10);
+   CHECK(v.size() == 2);
+}
