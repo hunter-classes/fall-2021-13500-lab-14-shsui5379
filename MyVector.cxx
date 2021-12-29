@@ -108,3 +108,12 @@ void MyVector<T>::pop_back(int n)
 
    array_size--;
 }
+
+/**
+ * Removes the last element
+ * */
+template <class T>
+void MyVector<T>::pop_back()
+{
+   array_size--;
+}
