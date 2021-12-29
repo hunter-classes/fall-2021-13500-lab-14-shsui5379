@@ -121,3 +121,12 @@ void MyVector<T>::pop_back()
 {
    array_size--;
 }
+
+/**
+ * Erases all the elements
+ * */
+template <class T>
+void clear()
+{
+   array_size = 0;
+}
