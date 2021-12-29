@@ -92,3 +92,19 @@ bool MyVector<T>::empty() const
 {
    return array_size == 0;
 }
+
+/**
+ * Removes the nth element
+ * 
+ * @param n  The index of the element to remove
+ * */
+template <class T>
+void MyVector<T>::pop_back(int n)
+{
+   for (int i = n; i < array_size - 2; i++)
+   {
+      array[i] = array[i + 1];
+   }
+
+   array_size--;
+}
