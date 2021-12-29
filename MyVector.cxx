@@ -62,3 +62,22 @@ std::size_t MyVector<T>::capacity() const
 {
    return array_capacity;
 }
+
+/**
+ * Add data to the end of the MyVector.
+ * 
+ * @param item  Data to be added
+ * */
+template <class T>
+void MyVector<T>::push_back(T item)
+{
+   //if the MyVector is currently at-capacity, then allocate it more memory
+   if (array_size == array_capacity)
+   {
+      (array_capacity == 0) ? array_capacity = 1 : array_capacity *= 2;
+      resize(array_capacity);
+   }
+
+   array[array_size] = item;
+   array_size++;
+}
