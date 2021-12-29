@@ -50,3 +50,15 @@ std::size_t MyVector<T>::size() const
 {
    return size;
 }
+
+/**
+ * Returns the total number of elements that the MyVector can
+ * hold before needing to allocate more memory.
+ * 
+ * @returns  The total number of elements that the MyVector can currently hold
+ * */
+template <class T>
+std::size_t MyVector<T>::capacity() const
+{
+   return capacity;
+}
