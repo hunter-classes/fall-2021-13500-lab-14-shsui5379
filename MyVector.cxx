@@ -102,7 +102,7 @@ bool MyVector<T>::empty() const
 template <class T>
 void MyVector<T>::pop_back(std::size_t n)
 {
-   for (int i = 0; i < array_size - 2; i++)
+   for (int i = 0; i < array_size - 1; i++)
    {
       if (i >= n)
       {
