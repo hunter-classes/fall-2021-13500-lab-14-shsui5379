@@ -111,3 +111,19 @@ TEST_CASE("[] and push_back")
    CHECK(v[0] == "a");
    CHECK(v[1] == "b");
 }
+
+TEST_CASE("[] and pop_back(n)")
+{
+   MyVector<int> v;
+
+   for (int i = 0; i < 4; i++)
+   {
+      v.push_back(i);
+   }
+
+   v.pop_back(1);
+
+   CHECK(v[0] == 0);
+   CHECK(v[1] == 2);
+   CHECK(v[2] == 3);
+}
