@@ -100,3 +100,14 @@ TEST_CASE("[] operator")
    v[3] = 100;
    CHECK(v[3] == 100);
 }
+
+TEST_CASE("[] and push_back")
+{
+   MyVector<std::string> v;
+
+   v.push_back("a");
+   v.push_back("b");
+
+   CHECK(v[0] == "a");
+   CHECK(v[1] == "b");
+}
