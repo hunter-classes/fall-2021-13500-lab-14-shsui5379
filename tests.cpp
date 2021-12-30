@@ -54,11 +54,11 @@ TEST_CASE("size, resize, capacity, push_back")
 
 TEST_CASE("empty and clear")
 {
-   MyVector<int> v;
+   MyVector<double> v;
 
    CHECK(v.empty() == true);
 
-   v.push_back(1);
+   v.push_back(1.5);
    CHECK(v.empty() == false);
 
    v.clear();
